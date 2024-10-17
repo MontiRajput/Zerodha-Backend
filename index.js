@@ -14,10 +14,13 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "",
-    methods: ["GET", "POST", "PUT"], // Allow specific methods
-    allowedHeaders: [""], // Allow specific headers
-    credentials: true, // Allow cookies to be sent
+    origin: [
+      "https://zerodha-project-git-main-montirajputs-projects.vercel.app/",
+      "https://zerodha-ebon.vercel.app/",
+    ],
+    methods: ["GET", "POST", "PUT"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   })
 );
 
