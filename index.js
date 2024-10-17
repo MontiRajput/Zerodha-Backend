@@ -15,7 +15,7 @@ const cors = require("cors");
 app.use(
   cors({
     origin: [
-      "https://zerodha-project-git-main-montirajputs-projects.vercel.app", // No trailing slash
+      "https://zerodha-project.vercel.app", // No trailing slash
       "https://zerodha-ebon.vercel.app",
     ],
     methods: ["GET", "POST", "PUT"],
@@ -23,6 +23,7 @@ app.use(
     credentials: true, // Make sure this is set if you're using cookies or tokens
   })
 );
+
 app.options("*", cors()); // Handle preflight requests
 
 app.use(bodyParser.json());
